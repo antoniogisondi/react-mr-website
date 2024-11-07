@@ -1,0 +1,9 @@
+.header {
+    background: url('https://via.placeholder.com/1920x400') center/cover no-repeat;
+    /* height: 400px; */
+    color: white;
+  }
+  .floating-icons a:hover {
+    color: #ffa500;
+    transform: scale(1.1);
+  }
