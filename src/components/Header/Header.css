@@ -3,7 +3,37 @@
     /* height: 400px; */
     color: white;
   }
+
+  .bg-color{
+    background-color: #a5eff1;
+  }
   .floating-icons a:hover {
     color: #ffa500;
     transform: scale(1.1);
   }
+
+.logo{
+  width: 10%;
+}    
+
+.middle-content {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.slogan {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.contact-info {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.contact-info span {
+  margin: 0 10px;
+}
+

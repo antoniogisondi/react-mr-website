@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
 import { Button, Navbar, Offcanvas } from 'react-bootstrap'
-import { FaHome, FaHammer, FaPhone, FaBars } from 'react-icons/fa';
+import { FaHome, FaHammer, FaPhone, FaBars, FaEnvelope } from 'react-icons/fa';
+import logo from '/img/logo-mr.png'
 import './Header.css'
 
 function Header() {
@@ -12,10 +13,16 @@ function Header() {
   return (
     <header className="header position-relative">
       {/* Logo e pulsante menu hamburger */}
-      <Navbar bg="dark" variant="dark" expand="lg" className="p-3">
-        <Navbar.Brand to="/" className="ms-3 text-white">
-          <FaHammer /> Costruzioni
+      <Navbar expand="lg" className="bg-color p-3">
+        <Navbar.Brand to="/" className="navbar-width text-white">
+          <img src={logo} alt="logo-mr" className='logo' />
         </Navbar.Brand>
+        <div className="middle-content text-center">
+          <p className="slogan text-dark mb-1">Costruiamo il tuo futuro con passione</p>
+          <div className="contact-info text-dark">
+            <span><FaPhone /> +39 123 456 7890</span> | <span><FaEnvelope /> info@impresaedile.com</span>
+          </div>
+        </div>
         <Button variant="outline-light" className="ms-auto me-3" onClick={handleShowMenu}>
           <FaBars /> Menu
         </Button>
@@ -36,13 +43,6 @@ function Header() {
           </nav>
         </Offcanvas.Body>
       </Offcanvas>
-
-      {/* Icone flottanti a sinistra */}
-      {/* <div className="floating-icons position-absolute top-50 start-0 translate-middle-y d-flex flex-column gap-3 ms-3">
-        <Link to="/" className="text-white fs-4"><FaHome /></Link>
-        <Link to="/contatti" className="text-white fs-4"><FaPhone /></Link>
-        <Link to="/servizi" className="text-white fs-4"><FaHammer /></Link>
-      </div> */}
     </header>
   )
 }
