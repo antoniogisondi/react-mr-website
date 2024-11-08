@@ -12,11 +12,20 @@
     transform: scale(1.1);
   }
 
-.logo{
-  width: 10%;
+  .navbar-width{
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+.navbar-width img{
+  max-width: 100px;
 }    
 
 .middle-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   flex-grow: 1;
 }

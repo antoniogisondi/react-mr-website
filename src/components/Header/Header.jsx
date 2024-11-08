@@ -13,9 +13,9 @@ function Header() {
   return (
     <header className="header position-relative">
       {/* Logo e pulsante menu hamburger */}
-      <Navbar expand="lg" className="bg-color p-3">
+      <Navbar className="bg-color p-3">
         <Navbar.Brand to="/" className="navbar-width text-white">
-          <img src={logo} alt="logo-mr" className='logo' />
+          <img src={logo} alt="logo-mr" />
         </Navbar.Brand>
         <div className="middle-content text-center">
           <p className="slogan text-dark mb-1">Costruiamo il tuo futuro con passione</p>
