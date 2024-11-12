@@ -1,8 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Button, Card, Carousel, Container, Row, Col } from 'react-bootstrap';
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import ProjectsCarousel from '../../components/ProjectsCarousel/ProjectsCarousel';
+import ServicesCarousel from '../../components/ServicesCarousel/ServicesCarousel';
 import './HomePage.css'
 
 function HomePage() {
@@ -21,45 +23,22 @@ function HomePage() {
     },
   ]
 
-  const projects = [
-    {
-
-    },
-    {
-
-    },
-
-  ]
-
   return (
     <div className='container-fluid gx-0'>
       <Header/>
         <main>
-          {/* Hero Section */}
-          <section className="hero-section text-center text-white" style={{ backgroundImage: 'url("/path/to/hero-image.jpg")', backgroundSize: 'cover', padding: '80px 20px' }}>
-            <h1>Costruiamo il futuro con competenza</h1>
-            <p className="lead">Esperienza e qualità per ogni progetto</p>
-            <Button variant="warning" className="mt-3">Richiedi un preventivo</Button>
-          </section>
+        <section className="hero-section">
+            <div className="overlay"></div>
+            <div className="hero-content">
+                <h1>Costruiamo il futuro insieme a te</h1>
+                <p>Esperienza, qualità e passione in ogni progetto</p>
+                <Link to="/servizi" className="cta-button">Scopri di più</Link>
+            </div>
+        </section>
 
-          {/* Sezione Servizi */}
-          <section className="services-section py-5 bg-light">
-            <Container>
-              <h2 className="text-center mb-4">I nostri servizi</h2>
-              <Row>
-                {services.map((service, index) => (
-                  <Col md={4} key={index}>
-                    <Card className="mb-3">
-                      <Card.Body>
-                        <Card.Title>{service.titolo}</Card.Title>
-                        <Card.Text>{service.descrizione}</Card.Text>
-                      </Card.Body>
-                    </Card>
-                  </Col>
-                ))}
-              </Row>
-            </Container>
-          </section>
+
+        {/* Sezione Servizi */}
+        <ServicesCarousel/>
 
           {/* Sezione Progetti Recenti */}
           <section className="projects-section py-5">

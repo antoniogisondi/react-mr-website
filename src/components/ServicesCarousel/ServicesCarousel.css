@@ -1,0 +1,83 @@
+.fan-carousel-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Stili della griglia a ventaglio */
+.fan-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    perspective: 1000px;
+    max-width: 100vw;
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    transform-origin: center bottom;
+    padding: 20px;
+    color: white;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.card.selected {
+    opacity: 1;
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+}
+
+/* Responsività per schermi piccoli */
+@media (max-width: 768px) {
+    .card {
+        width: 150px;
+        height: 220px;
+    }
+
+    .fan-carousel {
+        max-width: 90vw;
+    }
+
+    .card:not(.selected) {
+        transform: translateX(calc(var(--position) * 100px)) rotate(calc(var(--position) * 10deg)) scale(0.8);
+    }
+}
+
+.card h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+}
+
+
+

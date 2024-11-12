@@ -24,7 +24,6 @@ function ProjectsCarousel() {
             image: img1,
             title: 'Progetto 1',
             description: 'Descrizione del progetto 1. Un lavoro di alta qualità.',
-            cta: 'Scopri di più',
             link: '/progetti/1'
         },
         {
@@ -32,7 +31,6 @@ function ProjectsCarousel() {
             image: img1,
             title: 'Progetto 2',
             description: 'Descrizione del progetto 2. Un altro progetto esemplare.',
-            cta: 'Scopri di più',
             link: '/progetti/2'
         },
     ];
@@ -48,7 +46,7 @@ function ProjectsCarousel() {
                         <div className="text-container">
                             <h2>{slide.title}</h2>
                             <p>{slide.description}</p>
-                            <a href={slide.link} className="cta-button">{slide.cta}</a>
+                            <a href={slide.link} className="cta-button">Vai al progetto</a>
                         </div>
                     </div>
                 ))}

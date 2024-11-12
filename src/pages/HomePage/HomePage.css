@@ -1,0 +1,152 @@
+/* JUMBOTRON */
+
+.hero-section {
+    background-image: url('../../../public/img/hero-section-img-1.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-trasparente */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-button {
+    background-color: #ffa500;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff8c00;
+}
+
+/* FINE JUMBOTRON */
+
+/* SERVIZI */
+
+.services-steps {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.steps-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+/* Linea verticale */
+.steps-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 4px;
+    background-color: #ffa500;
+    z-index: -1;
+}
+
+.icon {
+    background-color: #ffa500;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    position: relative;
+    z-index: 1;
+}
+
+.content {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-left: 20px;
+    width: 100%;
+    text-align: left;
+}
+
+.content h3 {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.content p {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.step-link {
+    color: #ffa500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.step-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile adjustment */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .content {
+        margin-left: 0;
+        width: auto;
+        padding: 15px;
+    }
+}
+
+/* FINE SERVIZI */
