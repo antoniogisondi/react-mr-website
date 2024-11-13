@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
+import { Link } from 'react-router-dom'
 import './ServicesCarousel.css'
-import img1 from '../../../public/img/progettazione-edile.jpg'
-import img2 from '../../../public/img/costruzione-edile.jpg'
-import img3 from '../../../public/img/ristrutturazione-edile.jpg'
-import img4 from '../../../public/img/manutenzione-edile.jpg'
-import img5 from '../../../public/img/consulenza-edile.jpg'
+import img1 from '/img/progettazione-edile.jpg'
+import img2 from '/img/costruzione-edile.jpg'
+import img3 from '/img/ristrutturazione-edile.jpg'
+import img4 from '/img/manutenzione-edile.jpg'
+import img5 from '/img/consulenza-edile.jpg'
 
 function ServicesCarousel() {
     const [selectedIndex, setSelectedIndex] = useState(2)
@@ -41,7 +42,7 @@ function ServicesCarousel() {
                     }}
                     onClick={() => selectCard(index)}
                     >
-                    <h3>{service.title}</h3>
+                    <Link>{service.title}</Link>
                     <p>{service.description}</p>
                     </div>
                 );

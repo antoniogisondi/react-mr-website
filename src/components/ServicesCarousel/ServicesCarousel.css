@@ -41,9 +41,11 @@
     opacity: 1;
 }
 
-.card h3 {
+.card a {
+    color: white;
     font-size: 1.3em;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .card p {
