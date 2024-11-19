@@ -10,11 +10,11 @@ import img5 from '/img/consulenza-edile.jpg'
 function ServicesCarousel() {
     const [selectedIndex, setSelectedIndex] = useState(2)
     const services = [
-        { id: 0, title: 'Progettazione', description: 'Descrizione del servizio di progettazione', img:img1},
-        { id: 1, title: 'Costruzione', description: 'Descrizione del servizio di costruzione', img:img2},
-        { id: 2, title: 'Ristrutturazione', description: 'Descrizione del servizio di ristrutturazione', img:img3},
-        { id: 3, title: 'Manutenzione', description: 'Descrizione del servizio di manutenzione', img:img4},
-        { id: 4, title: 'Manutenzione', description: 'Descrizione del servizio di manutenzione', img:img5},
+        { id: 0, title: 'Progettazione', description: 'Descrizione del servizio di progettazione', img:img1, path: 'servizi/progettazione'},
+        { id: 1, title: 'Costruzione', description: 'Descrizione del servizio di costruzione', img:img2, path: 'servizi/costruzione'},
+        { id: 2, title: 'Ristrutturazione', description: 'Descrizione del servizio di ristrutturazione', img:img3, path: 'servizi/ristrutturazione'},
+        { id: 3, title: 'Manutenzione', description: 'Descrizione del servizio di manutenzione', img:img4, path: 'servizi/manutenzione'},
+        { id: 4, title: 'Consulenza', description: 'Descrizione del servizio di consulenza', img:img5, path: 'servizi/consulenza'},
     ]
 
     const selectCard = (index) =>{
@@ -42,7 +42,7 @@ function ServicesCarousel() {
                     }}
                     onClick={() => selectCard(index)}
                     >
-                    <Link>{service.title}</Link>
+                    <Link to={`${service.path}`}>{service.title}</Link>
                     <p>{service.description}</p>
                     </div>
                 );

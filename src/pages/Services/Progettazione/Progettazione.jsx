@@ -1,9 +1,14 @@
 import React from 'react'
 import './Progettazione.css'
+import Header from '../../../components/Header/Header'
+import Footer from '../../../components/Footer/Footer'
 
 function Progettazione() {
   return (
-    <div>Progettazione</div>
+    <>
+      <Header/>
+      <Footer/>
+    </>
   )
 }
 

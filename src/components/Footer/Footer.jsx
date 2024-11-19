@@ -41,7 +41,7 @@ function Footer() {
         </div>
       </section>
       
-      <div className="bg-color text-center p-4">
+      <div className="bg-color-footer text-center p-4">
         © 2024 Copyright:
         <a className="text-reset fw-bold" href="https://example.com/">YourWebsite.com</a>
       </div>
